@@ -35,6 +35,100 @@
         <li>Лучшие фотолокации.</li>
         <li>Прогулки по крышам.</li>
     </ol>
+    <h2>Какие есть тарифы?</h2>
+    <p>
+        Мы знаем, что каждое путешествие уникально. Поэтому разработали несколько тарифов, чтобы вы могли выбрать самый комфортный для себя. 
+        Независимо от выбранного тарифа, вас ждет незабываемое путешествие.
+    </p>
+    <table>
+        <tr>
+            <th>Тариф</th>
+            <th>Группы</th>
+            <th>Стоимость</th>
+            <th>Программа</th>
+
+        </tr>
+        <tr>
+            <td>Эконом</td>
+            <td>От 15 человек</td>
+            <td>1500 руб.</td>
+            <td>Пешая прогулка, Погрулка по крышам</td>
+        </tr>
+        <tr>
+            <td>Комфорт</td>
+            <td>От 7 человек</td>
+            <td>2500 руб.</td>
+            <td>Пешая прогулка, Экскурсия по рекам и каналам, Погрулка по крышам</td>
+        </tr>
+        <tr>
+            <td>Премиум</td>
+            <td>От 4 до 6 человек</td>
+            <td>4200 руб.</td>
+            <td>Пешая прогулка, Экскурсия по рекам и каналам, Погрулка по крышам, Экскурсия в Петергоф</td>
+        </tr>
+        <tr>
+            <td>Люкс</td>
+            <td>1-2 человека</td>
+            <td>6000 руб.</td>
+            <td>Эксклюзивные маршруты под ключ, Пешая прогулка, Экскурсия по рекам и каналам, Погрулка по крышам, Экскурсия в Петергоф</td>
+        </tr>
+    </table>
+    <p>Мы предлагаем различные варианты оплаты. Менеджер поможет подобрать оптимальный вариант.</p>
+    <h2>Дополнительные услуги</h2>
+    <form action="">
+        <ul>
+            <li>
+                <input type="checkbox" name="services" value="transfer" data-price="100">
+                <label for="">Трансфер до места начала экскурсии</label>
+            </li>
+            <li>
+                <input type="checkbox" name="services" value="disabled_transfer" data-price="100">
+                <label for="">Трансфер для людей из маломобильных групп населения</label>
+            </li>
+            <li>
+                <input type="checkbox" name="services" value="breakfast" data-price="100">
+                <label for="">Завтрак</label>
+            </li>
+            <li>
+                <input type="checkbox" name="services" value="lunch" data-price="100">
+                <label for="">Обед</label>
+            </li>
+            <li>
+                <input type="checkbox" name="services" value="dinner" data-price="100">
+                <label for="">Ужин</label>
+            </li>
+            <li>
+                <input type="checkbox" name="services" value="translator" data-price="100">
+                <label for="">Переводчик с русского на английский язык</label>
+            </li>
+            <li>
+                <input type="checkbox" name="services" value="children_guide" data-price="100">
+                <label for="">Экскурсовод для детей</label>
+            </li>
+            <li>
+                <input type="checkbox" name="services" value="sign_language_interpreter" data-price="100">
+                <label for="">Сурдопереводчик</label>
+            </li>
+        </ul>
+    </form>
+    <p2 id="total-price">Сумма: 0 рублей</p2>
+    <script>
+        const checkboxes = document.querySelectorAll(`input[name="services"]`)
+        const totalPriceElement = document.getElementById(`total-price`)
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                let totalPrice = 0
+                checkboxes.forEach(checkbox => {
+                    if(checkbox.checked) {
+                        totalPrice += parseInt(checkbox.getAttribute('data-price'))
+                    }
+                })
+                totalPriceElement.textContent = `Сумма: ${totalPrice} рублей`
+            })
+        })
+    </script>
+
     <h2>Кому подойдет экскурсия?</h2>
     <img 
         src="images/18.png" 
@@ -89,6 +183,23 @@
         Отдельно отмечу маршрут. 
         Не первый раз в Питере, но эти локации увидела впервые. Класс!
     </blockquote>
+
+    <form action="">
+        <input type="text" name="" id="" placeholder="Имя"><br>
+        <input type="text" name="" id="" placeholder="Фамилия"><br>
+        <input type="email" name="" id="" placeholder="E-mail"><br>
+        <input type="tel" name="" id="" placeholder="Номер телефона"><br>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <select name="tariff" id="tariff">
+        <label for="tariff">Выберите тариф</label>
+        <option value="economy">Эконом</option>
+        <option value="comfort">Комфорт</option>
+        <option value="premium">Премиум</option>
+        <option value="luxury">Люкс</option>
+    </select>
+
     <a href="https://vk.ru/dimasik0123">Свяжитесь с автором экскурсии</a>
 </body>
 </html>
