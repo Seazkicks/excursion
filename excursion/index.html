@@ -245,21 +245,23 @@
                                 <p>Для подробной информации заполните форму. Наши менеджеры с вами свяжутся.</p>
                             </div>
                             <form class="contacts-form" method="post" action="/">
-                                <input type="text" placeholder="Имя"><br>
-                                <input type="text" placeholder="Фамилия"><br>
-                                <input type="email" placeholder="E-mail"><br>
-                                <input type="tel" placeholder="Номер телефона"><br>
-                                <button type="submit">Отправить</button>
+                                <div class="contact-form-top">
+                                    <input type="text" placeholder="Имя"><br>
+                                    <input type="text" placeholder="Фамилия"><br>
+                                    <input type="email" placeholder="E-mail"><br>
+                                    <input type="tel" placeholder="Номер телефона"><br>
+                                </div>
             
                                 <div class="contacts-form-bottom">
-                                    <label class="contacts-tariff-label" for="tariff">Выберите тариф</label>
+                                    <label class="contacts-tariff-label" for="tariff">Выберите тариф:</label>
                                     <select class="contacts-select" name="tariff" id="tariff">
                                         <option value="economy">Эконом</option>
                                         <option value="comfort">Комфорт</option>
                                         <option value="premium" selected>Премиум</option>
                                         <option value="luxury">Люкс</option>
-                                    </select>
+                                    </select>  
                                 </div>
+                                <button type="submit">Отправить</button>
                             </form>
                         </div>
                         <address class="contacts-address">

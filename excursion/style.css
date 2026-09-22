@@ -413,11 +413,45 @@
     margin-bottom: 10px;
 }
 
-.contacts-form-bottom {
-    margin-top: 30px;
+.contacts-form-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+}
+
+.contacts-form input {
+    border-radius: 10px;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+}
+
+.contacts-form input:not(:last-child) {
+    margin: 10px;
+}
+
+.contacts-form button {
+    margin-left: 10px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+.contacts-form button:hover {
+    opacity: .5;
+}
+
+.contacts-form-bottom {
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
+}
+
+.contacts-form-bottom select {
+    margin-left: 25px;
+    padding: 10px 5px;
+    border-radius: 10px;
 }
 
 .contacts-tariff-label {
@@ -534,4 +568,5 @@
 
 .copyright {
     text-align: center;
+    color:#fff;
 }
