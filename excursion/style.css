@@ -28,7 +28,7 @@
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     color: #000;
-
+    line-height: 1.4;
 }
 
 .container {
@@ -42,6 +42,34 @@
     padding: 20px 0;
 }
 
+/*Navbar*/
+.navbar {
+
+}
+
+.navbar-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: #000000;
+    padding: 5px;
+}
+
+.navbar-link:hover {
+    opacity: .5;
+}
+
 .intro {
     min-height: 610px;
     background-image: url('./images/intro.png');
@@ -51,6 +79,7 @@
     padding-top: 180px;
     padding-bottom: 120px;
     box-sizing: border-box;
+    background-color: #242424;
 }
 
 .intro .container {
@@ -82,8 +111,13 @@
     grid-template-columns: 1fr 260px;
 }
 
+.page-main-column {
+    background-color: #fff;
+}
+
 .page-section {
     position: relative;
+    padding: 40px 80px 40px 0;
 }
 
 .page-section-with-bg::before {
@@ -93,6 +127,7 @@
     right: 0;
     bottom: 0;
     width: 9999px;
+    background-color: #f2f2f2;
 }
 
 .program-title {
@@ -218,12 +253,17 @@
     padding: 20px;
     font-weight: 700;
     color: #fff;
+    background-color: #242424;
     text-align: left;
 }
 
 .prices-table td {
     padding: 20px;
     font-size: 16px;
+}
+
+.prices-table tr:nth-child(odd) td {
+    background-color: #f2f2f2;
 }
 
 .prices-table th:first-child,
@@ -288,6 +328,7 @@
     margin-top: auto;
     padding: 20px;
     border-radius: 15px;
+    background-color: #242424;
     color: #fff;
     font-size: 20px;
     font-weight: 700;
@@ -297,19 +338,18 @@
 .reviews-title {
     margin: 0;
     margin-bottom: 30px;
-
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 40px;
-    padding: 200px 80px 20px 40px;
-    border-radius: 20px;
-
     font-size: 40px;
     font-weight: 700;
 }
 
 .reviews-item {
     border-radius: 20px;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 40px;
+    padding: 20px 80px 20px 40px;
+    border-radius: 20px;
+    background-color: #f8f8f8;
 }
 
 .reviews-item:not(:last-child) {
@@ -358,6 +398,7 @@
 .contacts-content {
     padding: 20px 280px 20px 40px;
     border-radius: 20px;
+    background-color: #f8f8f8;
 }
 
 .contacts-text-wrapper {
@@ -396,6 +437,7 @@
     display: flex;
     justify-content: space-between;
     color:#fff;
+    background-color: #242424;
     font-size: 40px;
     font-weight: 700;
     text-decoration: none;
@@ -425,6 +467,7 @@
 .sidebar {
     padding: 40px 0 40px 20px;
     color: #fff;
+    background-color: #242424;
 }
 
 .sidebar-title {
@@ -481,6 +524,7 @@
 
 .page-footer {
     padding: 30px 0;
+    background-color: #242424;
     color: #000000;
 }
 
